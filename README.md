@@ -7,7 +7,7 @@ This project is a simple task manager clone template build with React, React Con
 1. Clone the repository:
 
 ```bash
-git clone 
+git clone git@github.com:mehdizalyaul/task-manager-frontend.git
 ```
 
 2. Navigate to the project directory:
@@ -47,3 +47,7 @@ npm run dev
 - Lucid Icons
 - DnD Kit
 
+## Deployment
+
+- The project is deployed using **GitHub Pages** 
+- **GitHub Actions** is configured for automated deployment
