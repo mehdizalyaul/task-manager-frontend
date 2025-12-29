@@ -1,6 +1,6 @@
-# Trello clone
+# Task Manager Frontend
 
-This project is a simple Trello clone template build with React, React Context API, SCSS, and DnD Kit.
+This project is a simple task manager clone template build with React, React Context API, CSS, and DnD Kit.
 
 ## Setup
 
@@ -42,9 +42,8 @@ npm run dev
 ## Technologies Used
 
 - React
-- React Router
 - React Context API
-- SCSS
+- CSS
 - Lucid Icons
 - DnD Kit
 
