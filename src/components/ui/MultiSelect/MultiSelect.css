@@ -1,0 +1,145 @@
+/* Multi Select Styles */
+.multi-select {
+    position: relative;
+    width: 100%;
+}
+
+.multi-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 42px;
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    gap: 8px;
+}
+
+.multi-select-trigger:hover {
+    border-color: #9ca3af;
+}
+
+.multi-select-trigger.open {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.multi-select-trigger.disabled {
+    background-color: #f9fafb;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.multi-select-content {
+    flex: 1;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.multi-select-placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.multi-select-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+}
+
+.multi-select-tag {
+    display: flex;
+    align-items: center;
+}
+
+.multi-select-tag-remove {
+    margin-left: 4px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.multi-select-tag-remove:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.multi-select-arrow {
+    width: 20px;
+    height: 20px;
+    color: #6b7280;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.multi-select-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.multi-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 4px;
+}
+
+.multi-select-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.multi-select-option:hover {
+    background-color: #f3f4f6;
+}
+
+.multi-select-option:active {
+    background-color: #e5e7eb;
+}
+
+.multi-select-empty {
+    padding: 12px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Scrollbar styling for dropdown */
+.multi-select-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.multi-select-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.multi-select-dropdown::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.multi-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}

@@ -1,0 +1,149 @@
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Draggable Card Styles */
+.card.dragging {
+    opacity: 0.5;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: rotate(2deg);
+    transition: transform 0.2s ease;
+}
+
+.card.drag-overlay {
+    cursor: grabbing;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: rotate(2deg);
+}
+
+.card-tags {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f2937;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.card-emoji {
+    margin-right: 4px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.meta-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Priority Badge Styles */
+.priority-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.priority-low {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.priority-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.priority-high {
+    background-color: #fed7aa;
+    color: #9a3412;
+}
+
+.priority-urgent {
+    background-color: #fecaca;
+    color: #991b1b;
+}
+
+/* Drag Overlay Styles */
+.drag-overlay-card {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 8px;
+    cursor: grabbing;
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
+
+.drag-overlay-card .card {
+    margin-bottom: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.dragging-card .card {
+    opacity: 0.4;
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+}
+
+/* Draggable Card Interaction */
+.card {
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.dragging-card .card {
+    transform: none !important;
+}
+
+/* Non-draggable card styles */
+.non-draggable .card {
+    cursor: default !important;
+}
+
+.non-draggable .card:hover {
+    transform: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,9 @@
+
+import {createContext} from "react";
+
+export const TagContext = createContext({
+    tags: [],
+    addTag: () => {},
+    updateTag: () => {},
+    deleteTag: () => {}
+});

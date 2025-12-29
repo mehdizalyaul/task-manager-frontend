@@ -1,0 +1,38 @@
+.tag {
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tag-sm {
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+.tag-md {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.tag-blue {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.tag-yellow {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.tag-red {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.tag-green {
+    background-color: #d1fae5;
+    color: #065f46;
+}

@@ -1,0 +1,84 @@
+.header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 24px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.board-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.board-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.user-role-badge {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 24px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.board-menu-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #374151;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s;
+}
+
+.board-menu-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.chevron {
+    width: 16px;
+    height: 16px;
+}

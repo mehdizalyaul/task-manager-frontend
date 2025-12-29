@@ -1,0 +1,651 @@
+export const initialBoards = [
+  { id: "1", name: "Personal Tasks", isStarred: true, visibility: "private" },
+  { id: "2", name: "Side Projects", isStarred: false, visibility: "private" },
+  { id: "4", name: "Design department", isStarred: true, visibility: "team" },
+  { id: "5", name: "Marketing Team", isStarred: false, visibility: "team" },
+];
+
+const boardDataTemplates = {
+  "1": {
+    // Personal Tasks
+    columns: [
+      {
+        id: "todo",
+        title: "To Do",
+        tasks: [
+          {
+            id: "task-1-1",
+            title: "Morning workout routine",
+            tags: [{ id: "health", name: "Health", color: "green" }],
+            date: "2024-12-15",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 0,
+            emoji: "💪",
+            priority: "High",
+          },
+          {
+            id: "task-1-2",
+            title: "Read 30 pages of book",
+            tags: [{ id: "learning", name: "Learning", color: "purple" }],
+            date: "2024-12-10",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 1,
+            emoji: "📚",
+            priority: "Medium",
+          },
+          {
+            id: "task-1-4",
+            title: "Organize home office",
+            tags: [{ id: "personal", name: "Personal", color: "blue" }],
+            date: "2024-12-18",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 2,
+            emoji: "🏠",
+          },
+          {
+            id: "task-1-5",
+            title: "Learn Spanish - 30 min daily",
+            tags: [{ id: "learning", name: "Learning", color: "purple" }],
+            date: "2024-12-25",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 3,
+            emoji: "🇪🇸",
+          },
+        ],
+      },
+      {
+        id: "doing",
+        title: "In Progress",
+        tasks: [
+          {
+            id: "task-1-3",
+            title: "Plan weekend trip",
+            tags: [{ id: "personal", name: "Personal", color: "blue" }],
+            date: "2024-12-20",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 0,
+            emoji: "✈️",
+          },
+          {
+            id: "task-1-6",
+            title: "Meal prep for the week",
+            tags: [{ id: "health", name: "Health", color: "green" }],
+            date: "2024-12-16",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 1,
+            emoji: "🥗",
+          },
+        ],
+      },
+      {
+        id: "done",
+        title: "Completed",
+        tasks: [
+          {
+            id: "task-1-7",
+            title: "Buy Christmas gifts",
+            tags: [{ id: "personal", name: "Personal", color: "blue" }],
+            date: "2024-12-12",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 0,
+            emoji: "🎁",
+          },
+        ],
+      },
+    ],
+    tags: [
+      { id: "health", name: "Health", color: "green" },
+      { id: "learning", name: "Learning", color: "purple" },
+      { id: "personal", name: "Personal", color: "blue" },
+    ],
+    members: [
+      {
+        id: "1",
+        name: "John Doe",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        role: "Admin",
+      },
+    ],
+  },
+  "2": {
+    // Side Projects
+    columns: [
+      {
+        id: "backlog",
+        title: "Backlog",
+        tasks: [
+          {
+            id: "task-2-1",
+            title: "Build portfolio website",
+            tags: [{ id: "web-dev", name: "Web Dev", color: "orange" }],
+            date: "2024-12-25",
+            assignee: "https://i.pravatar.cc/150?img=2",
+            order: 0,
+            emoji: "💻",
+            priority: "Urgent",
+          },
+          {
+            id: "task-2-2",
+            title: "Mobile app concept",
+            tags: [{ id: "mobile", name: "Mobile", color: "cyan" }],
+            date: "2025-01-15",
+            assignee: "https://i.pravatar.cc/150?img=3",
+            order: 1,
+            emoji: "📱",
+          },
+          {
+            id: "task-2-8",
+            title: "Research competitor apps",
+            tags: [{ id: "research", name: "Research", color: "purple" }],
+            date: "2024-12-30",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 2,
+            emoji: "🔍",
+          },
+          {
+            id: "task-2-9",
+            title: "Setup CI/CD pipeline",
+            tags: [{ id: "devops", name: "DevOps", color: "red" }],
+            date: "2025-01-20",
+            assignee: "https://i.pravatar.cc/150?img=2",
+            order: 3,
+            emoji: "🔧",
+          },
+        ],
+      },
+      {
+        id: "development",
+        title: "Development",
+        tasks: [
+          {
+            id: "task-2-3",
+            title: "Setup React project",
+            tags: [{ id: "react", name: "React", color: "blue" }],
+            date: "2024-12-18",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 0,
+            emoji: "⚛️",
+          },
+          {
+            id: "task-2-4",
+            title: "Design database schema",
+            tags: [{ id: "backend", name: "Backend", color: "green" }],
+            date: "2024-12-22",
+            assignee: "https://i.pravatar.cc/150?img=2",
+            order: 1,
+            emoji: "🗄️",
+          },
+          {
+            id: "task-2-5",
+            title: "Implement user authentication",
+            tags: [{ id: "backend", name: "Backend", color: "green" }],
+            date: "2024-12-28",
+            assignee: "https://i.pravatar.cc/150?img=3",
+            order: 2,
+            emoji: "🔐",
+          },
+        ],
+      },
+      {
+        id: "deployed",
+        title: "Deployed",
+        tasks: [
+          {
+            id: "task-2-6",
+            title: "Landing page v1",
+            tags: [{ id: "web-dev", name: "Web Dev", color: "orange" }],
+            date: "2024-12-10",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 0,
+            emoji: "🚀",
+          },
+          {
+            id: "task-2-7",
+            title: "API documentation",
+            tags: [{ id: "docs", name: "Documentation", color: "gray" }],
+            date: "2024-12-14",
+            assignee: "https://i.pravatar.cc/150?img=2",
+            order: 1,
+            emoji: "📖",
+          },
+        ],
+      },
+    ],
+    tags: [
+      { id: "web-dev", name: "Web Dev", color: "orange" },
+      { id: "mobile", name: "Mobile", color: "cyan" },
+      { id: "react", name: "React", color: "blue" },
+      { id: "backend", name: "Backend", color: "green" },
+      { id: "research", name: "Research", color: "purple" },
+      { id: "devops", name: "DevOps", color: "red" },
+      { id: "docs", name: "Documentation", color: "gray" },
+    ],
+    members: [
+      {
+        id: "1",
+        name: "John Doe",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        role: "Member",
+      },
+      {
+        id: "2",
+        name: "Alice Smith",
+        avatar: "https://i.pravatar.cc/150?img=2",
+        role: "Admin",
+      },
+      {
+        id: "3",
+        name: "Bob Wilson",
+        avatar: "https://i.pravatar.cc/150?img=3",
+        role: "Member",
+      },
+    ],
+  },
+  "4": {
+    // Design Department
+    columns: [
+      {
+        id: "todo",
+        title: "To Do",
+        tasks: [
+          {
+            id: "task-4-1",
+            title: "Design new homepage layout",
+            tags: [
+              { id: "design-system", name: "Design System", color: "blue" },
+            ],
+            date: "2024-12-15",
+            assignee: "https://i.pravatar.cc/150?img=4",
+            order: 0,
+            emoji: "🎨",
+            priority: "High",
+          },
+          {
+            id: "task-4-2",
+            title: "Create user personas",
+            tags: [{ id: "research", name: "Research", color: "purple" }],
+            date: "2024-12-20",
+            assignee: "https://i.pravatar.cc/150?img=5",
+            order: 1,
+            emoji: "👥",
+          },
+          {
+            id: "task-4-8",
+            title: "Mobile app wireframes",
+            tags: [{ id: "wireframes", name: "Wireframes", color: "gray" }],
+            date: "2024-12-28",
+            assignee: "https://i.pravatar.cc/150?img=4",
+            order: 2,
+            emoji: "📱",
+          },
+          {
+            id: "task-4-9",
+            title: "Icon library expansion",
+            tags: [
+              { id: "design-system", name: "Design System", color: "blue" },
+            ],
+            date: "2025-01-05",
+            assignee: "https://i.pravatar.cc/150?img=6",
+            order: 3,
+            emoji: "🎭",
+          },
+        ],
+      },
+      {
+        id: "review",
+        title: "Review",
+        tasks: [
+          {
+            id: "task-4-3",
+            title: "Logo redesign concepts",
+            tags: [{ id: "branding", name: "Branding", color: "red" }],
+            date: "2024-12-12",
+            assignee: "https://i.pravatar.cc/150?img=4",
+            order: 0,
+            emoji: "🏷️",
+          },
+          {
+            id: "task-4-4",
+            title: "Color palette updates",
+            tags: [
+              { id: "design-system", name: "Design System", color: "blue" },
+            ],
+            date: "2024-12-18",
+            assignee: "https://i.pravatar.cc/150?img=5",
+            order: 1,
+            emoji: "🎨",
+          },
+          {
+            id: "task-4-5",
+            title: "User journey mapping",
+            tags: [{ id: "ux", name: "UX", color: "green" }],
+            date: "2024-12-22",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 2,
+            emoji: "🗺️",
+          },
+        ],
+      },
+      {
+        id: "approved",
+        title: "Approved",
+        tasks: [
+          {
+            id: "task-4-6",
+            title: "Dashboard redesign",
+            tags: [{ id: "ui", name: "UI Design", color: "orange" }],
+            date: "2024-12-08",
+            assignee: "https://i.pravatar.cc/150?img=4",
+            order: 0,
+            emoji: "📊",
+          },
+          {
+            id: "task-4-7",
+            title: "Accessibility audit",
+            tags: [
+              { id: "accessibility", name: "Accessibility", color: "purple" },
+            ],
+            date: "2024-12-14",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 1,
+            emoji: "♿",
+          },
+        ],
+      },
+    ],
+    tags: [
+      { id: "design-system", name: "Design System", color: "blue" },
+      { id: "research", name: "Research", color: "purple" },
+      { id: "branding", name: "Branding", color: "red" },
+      { id: "ui", name: "UI Design", color: "orange" },
+      { id: "ux", name: "UX", color: "green" },
+      { id: "wireframes", name: "Wireframes", color: "gray" },
+      { id: "accessibility", name: "Accessibility", color: "purple" },
+    ],
+    members: [
+      {
+        id: "1",
+        name: "John Doe",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        role: "Viewer",
+      },
+      {
+        id: "4",
+        name: "Sarah Davis",
+        avatar: "https://i.pravatar.cc/150?img=4",
+        role: "Admin",
+      },
+      {
+        id: "5",
+        name: "Mike Johnson",
+        avatar: "https://i.pravatar.cc/150?img=5",
+        role: "Member",
+      },
+      {
+        id: "6",
+        name: "Emma Brown",
+        avatar: "https://i.pravatar.cc/150?img=6",
+        role: "Member",
+      },
+    ],
+  },
+  "5": {
+    // Marketing Team
+    columns: [
+      {
+        id: "planning",
+        title: "Planning",
+        tasks: [
+          {
+            id: "task-5-1",
+            title: "Q1 Campaign Strategy",
+            tags: [{ id: "strategy", name: "Strategy", color: "green" }],
+            date: "2024-12-30",
+            assignee: "https://i.pravatar.cc/150?img=7",
+            order: 0,
+            emoji: "📈",
+            priority: "Urgent",
+          },
+          {
+            id: "task-5-2",
+            title: "Social media content calendar",
+            tags: [{ id: "social-media", name: "Social Media", color: "pink" }],
+            date: "2025-01-05",
+            assignee: "https://i.pravatar.cc/150?img=8",
+            order: 1,
+            emoji: "📅",
+          },
+          {
+            id: "task-5-8",
+            title: "Competitor analysis report",
+            tags: [{ id: "research", name: "Research", color: "purple" }],
+            date: "2024-12-28",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 2,
+            emoji: "🔍",
+          },
+          {
+            id: "task-5-9",
+            title: "Influencer partnership strategy",
+            tags: [{ id: "partnerships", name: "Partnerships", color: "blue" }],
+            date: "2025-01-10",
+            assignee: "https://i.pravatar.cc/150?img=9",
+            order: 3,
+            emoji: "🤝",
+          },
+        ],
+      },
+      {
+        id: "execution",
+        title: "Execution",
+        tasks: [
+          {
+            id: "task-5-3",
+            title: "Email newsletter design",
+            tags: [{ id: "email", name: "Email", color: "orange" }],
+            date: "2024-12-22",
+            assignee: "https://i.pravatar.cc/150?img=7",
+            order: 0,
+            emoji: "📧",
+          },
+          {
+            id: "task-5-4",
+            title: "Holiday campaign launch",
+            tags: [{ id: "campaign", name: "Campaign", color: "red" }],
+            date: "2024-12-15",
+            assignee: "https://i.pravatar.cc/150?img=8",
+            order: 1,
+            emoji: "🎄",
+          },
+          {
+            id: "task-5-5",
+            title: "Blog post series: Year in Review",
+            tags: [{ id: "content", name: "Content", color: "cyan" }],
+            date: "2024-12-25",
+            assignee: "https://i.pravatar.cc/150?img=1",
+            order: 2,
+            emoji: "✍️",
+          },
+        ],
+      },
+      {
+        id: "analytics",
+        title: "Analytics",
+        tasks: [
+          {
+            id: "task-5-6",
+            title: "Q4 Performance Report",
+            tags: [{ id: "analytics", name: "Analytics", color: "yellow" }],
+            date: "2024-12-10",
+            assignee: "https://i.pravatar.cc/150?img=9",
+            order: 0,
+            emoji: "📊",
+          },
+          {
+            id: "task-5-7",
+            title: "Customer acquisition cost analysis",
+            tags: [{ id: "metrics", name: "Metrics", color: "gray" }],
+            date: "2024-12-18",
+            assignee: "https://i.pravatar.cc/150?img=7",
+            order: 1,
+            emoji: "💰",
+          },
+        ],
+      },
+    ],
+    tags: [
+      { id: "strategy", name: "Strategy", color: "green" },
+      { id: "social-media", name: "Social Media", color: "pink" },
+      { id: "email", name: "Email", color: "orange" },
+      { id: "campaign", name: "Campaign", color: "red" },
+      { id: "content", name: "Content", color: "cyan" },
+      { id: "analytics", name: "Analytics", color: "yellow" },
+      { id: "research", name: "Research", color: "purple" },
+      { id: "partnerships", name: "Partnerships", color: "blue" },
+      { id: "metrics", name: "Metrics", color: "gray" },
+    ],
+    members: [
+      {
+        id: "1",
+        name: "John Doe",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        role: "Member",
+      },
+      {
+        id: "7",
+        name: "Lisa Garcia",
+        avatar: "https://i.pravatar.cc/150?img=7",
+        role: "Admin",
+      },
+      {
+        id: "8",
+        name: "David Lee",
+        avatar: "https://i.pravatar.cc/150?img=8",
+        role: "Member",
+      },
+      {
+        id: "9",
+        name: "Anna Wilson",
+        avatar: "https://i.pravatar.cc/150?img=9",
+        role: "Member",
+      },
+    ],
+  },
+};
+
+export function createEmptyBoardData(boardId) {
+  const template = boardDataTemplates[boardId];
+
+  return {
+    id: boardId,
+    columns: template?.columns || [
+      { id: "todo", title: "To Do", tasks: [] },
+      { id: "doing", title: "Doing", tasks: [] },
+      { id: "done", title: "Done", tasks: [] },
+    ],
+    tags: template?.tags || [{ id: "default", name: "Default", color: "blue" }],
+    members: template?.members || [
+      {
+        id: "1",
+        name: "John Doe",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        role: "Admin",
+      },
+    ],
+  };
+}
+
+const app = {
+  columns: [
+    {
+      id: "todo",
+      title: "To Do",
+      tasks: [
+        {
+          id: "task-1-1",
+          title: "Morning workout routine",
+          tags: [{ id: "health", name: "Health", color: "green" }],
+          date: "2024-12-15",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 0,
+          priority: "High",
+        },
+        {
+          id: "task-1-2",
+          title: "Read 30 pages of book",
+          tags: [{ id: "learning", name: "Learning", color: "purple" }],
+          date: "2024-12-10",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 1,
+          priority: "Medium",
+        },
+        {
+          id: "task-1-4",
+          title: "Organize home office",
+          tags: [{ id: "personal", name: "Personal", color: "blue" }],
+          date: "2024-12-18",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 2,
+          emoji: "🏠",
+        },
+        {
+          id: "task-1-5",
+          title: "Learn Spanish - 30 min daily",
+          tags: [{ id: "learning", name: "Learning", color: "purple" }],
+          date: "2024-12-25",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 3,
+        },
+      ],
+    },
+    {
+      id: "doing",
+      title: "In Progress",
+      tasks: [
+        {
+          id: "task-1-3",
+          title: "Plan weekend trip",
+          tags: [{ id: "personal", name: "Personal", color: "blue" }],
+          date: "2024-12-20",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 0,
+        },
+        {
+          id: "task-1-6",
+          title: "Meal prep for the week",
+          tags: [{ id: "health", name: "Health", color: "green" }],
+          date: "2024-12-16",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 1,
+        },
+      ],
+    },
+    {
+      id: "done",
+      title: "Completed",
+      tasks: [
+        {
+          id: "task-1-7",
+          title: "Buy Christmas gifts",
+          tags: [{ id: "personal", name: "Personal", color: "blue" }],
+          date: "2024-12-12",
+          assignee: "https://i.pravatar.cc/150?img=1",
+          order: 0,
+        },
+      ],
+    },
+  ],
+  tags: [
+    { id: "health", name: "Health", color: "green" },
+    { id: "learning", name: "Learning", color: "purple" },
+    { id: "personal", name: "Personal", color: "blue" },
+  ],
+  members: [
+    {
+      id: "1",
+      name: "John Doe",
+      avatar: "https://i.pravatar.cc/150?img=1",
+      role: "Admin",
+    },
+  ],
+};

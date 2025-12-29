@@ -1,0 +1,50 @@
+/* TextArea Styles */
+.text-area {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.text-area:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.text-area:disabled {
+    background-color: #f9fafb;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.text-area-error {
+    border-color: #ef4444;
+}
+
+.text-area-error:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.text-area-resize-none {
+    resize: none;
+}
+
+.text-area-resize-vertical {
+    resize: vertical;
+}
+
+.text-area-resize-horizontal {
+    resize: horizontal;
+}
+
+.text-area-resize-both {
+    resize: both;
+}
